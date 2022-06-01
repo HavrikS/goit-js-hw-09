@@ -7,13 +7,13 @@ startBtn.addEventListener('click', startBtnHandler);
 stopBtn.addEventListener('click', stopBtnHandler);
 
 let timerId = null;
-let disablet = false;
+startBtn.disablet = false;
 
 function startBtnHandler() {
-    if (disablet) {
+    if (startBtn.disablet) {
         return
     };
-    disablet = true;
+    startBtn.disablet = true;
     timerId = setInterval(() => {
     body.style.backgroundColor = getRandomHexColor();
     }, 1000);
@@ -22,7 +22,7 @@ function startBtnHandler() {
 
 function stopBtnHandler() {
     clearInterval(timerId);
-    disablet = false;
+    startBtn.disablet = false;
 };
 
 function getRandomHexColor() {
