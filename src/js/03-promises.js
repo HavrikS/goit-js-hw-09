@@ -7,7 +7,7 @@ const form = document.querySelector('.form');
 
 const onSubmit = (e) => {
   e.preventDefault()
-  for (i = 1; i <= parseInt(amount.value); i += 1){
+  for (let i = 1; i <= parseInt(amount.value); i += 1){
     let position = i;
     const newDelay = parseInt(delay.value) + parseInt(step.value) * (i - 1);
     createPromise(position, newDelay)
